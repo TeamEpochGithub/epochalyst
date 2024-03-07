@@ -14,7 +14,7 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.15
+    rev: v0.16
     hooks:
       - id: validate-pyproject
   - repo: https://github.com/pre-commit/pygrep-hooks
@@ -26,7 +26,7 @@ repos:
       - id: python-no-log-warn
       - id: python-use-type-annotations
   - repo: https://github.com/jackdewinter/pymarkdown
-    rev: v0.9.15
+    rev: v0.9.17
     hooks:
       - id: pymarkdown
         args:
@@ -39,7 +39,7 @@ repos:
       - id: sphinx-lint
         args: [ --enable=default-role ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.9
+    rev: v0.3.1
     hooks:
       - id: ruff
       - id: ruff-format
@@ -50,46 +50,16 @@ repos:
         exclude: ^tests/
         additional_dependencies:
           - numpy
-          - scikit-learn
-          - scikit-image
-          - scipy
-          - tqdm
+          - pandas-stubs
+          - dask
           - polars
-          - imagecodecs
-          - Pillow
-          - opencv-python
-          - tifffile
-          - seaborn
-          - matplotlib
-          - plotly
           - torch
           - torchaudio
           - torchvision
           - torch-summary
-          - open-clip-torch
-          - dash
-          - dash-bootstrap-components
-          - dash-bootstrap-templates
-          - rasterio
-          - dask
-          - dask-glm
-          - dask_image
-          - dask-ml
-          - distributed
           - fsspec
-          - segmentation-models-pytorch
-          - catboost
-          - albumentations
-          - typing_extensions
           - annotated-types
-          - pandas-stubs
-          - traitlets
-          - hydra-core
-          - wandb
-          - randomname
-          - coloredlogs
-          - kornia
-          - einops
+          - typing_extensions
           - pytest
           - agogos
         args: [ --disallow-any-generics, --disallow-untyped-defs, --disable-error-code=import-untyped]
